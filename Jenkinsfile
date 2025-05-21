@@ -3,8 +3,8 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials("dhubcred")
     }
     agent {
-        label 'K-M'}
- 
+        label 'K-M'
+    }
     stages {
         stage('Git') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Docker') {
             steps {
-                sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOKERHUB_CREDENTIALS_PSW}'
+                sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}'
                 sh 'sudo docker build /home/ubuntu/jenkins/workspace/prt -tintellipaatsai/prt-task'
                 sh 'sudo docker push intellipaatsai/prt-task'
     }

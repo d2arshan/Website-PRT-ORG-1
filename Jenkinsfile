@@ -1,5 +1,5 @@
 pipeline {
-    envoirnment {
+    envoironment {
         DOCKERHUB_CREDENTIALS = credentials("dhubcred")
     }
     agent {

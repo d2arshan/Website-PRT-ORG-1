@@ -5,17 +5,17 @@ metadata:
   labels:
     app: apache
 spec:
-  replica: 5
+  replicas: 5
   selector:
     matchLabels:
       app: apache
-template:
-  metadata:
-    labels:
-      app: apache
-  spec:    
-   containers:
-   - name: mydeploymentcont
-     image: intellipaatsai/prt-task/:latest
-     ports:
-     - containerPort: 80
+  template:
+    metadata:
+      labels:
+        app: apache
+    spec:    
+      containers:
+      - name: mydeploymentcont
+        image: intellipaatsai/prt-task:latest
+        ports:
+        - containerPort: 80

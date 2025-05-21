@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Docker') {
             steps {
-                sh 'sudo dcoker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOKERHUB_CREDENTIALS_PSW}'
+                sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOKERHUB_CREDENTIALS_PSW}'
                 sh 'sudo docker build /home/ubuntu/jenkins/workspace/prt -tintellipaatsai/prt-task'
                 sh 'sudo docker push intellipaatsai/prt-task'
     }

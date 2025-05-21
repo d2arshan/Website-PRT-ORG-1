@@ -3,7 +3,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials("dhubcred")
     }
     agent {
-        label 'k-m'}
+        label 'k_m'}
  
     stages {
         stage('Git') {

@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}'
                 sh 'sudo docker build ./prt -t intellipaatsai/prt-task' 
-                sh 'sudo docker build -t intellipaatsai/prt-task .' 
+                su 'sudo docker build -t intellipaatsai/prt-task /home/ubuntu/jenkins/workspace/test/prt'
     }
 }
  stage('k8s') {

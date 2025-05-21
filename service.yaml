@@ -5,8 +5,8 @@ metadata:
 spec:
   type: NodePort
   selector:
-     app: apache
+    app: apache
   ports:
     - port: 80
-    targetPort: 80
-    nodePort: 30100
+      targetPort: 80
+      nodePort: 30100

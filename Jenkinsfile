@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}'
                 // Adjust path to your Dockerfile location
-                sh 'sudo docker build . -t intellipaatsai/prt-task'
+                sh 'sudo docker build . -t d2arshan/apache2'
             }
         }
         stage('k8s') {

@@ -16,6 +16,6 @@ spec:
     spec:    
       containers:
       - name: mydeploymentcont
-        image: intellipaatsai/prt-task:latest
+        image: d2arshan/apache2:latest
         ports:
         - containerPort: 80
